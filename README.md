@@ -15,5 +15,30 @@ This skill is designed to be a helper when dealing with recipes. It will convert
 * convert {OldUnit} to {NewUnit}
 * what is {OldUnit} in {NewUnit}
 
+### Units supported
+
+* mL to Litres
+* mL to Cups
+* mL to Pints
+* mL to Fluid Ounces
+* cups to mL
+* cups to Litres
+* Litres to Cups
+* Litres to Pints
+* Litres to Fluid Ounces
+* Pints to mL
+* Pints to Litres
+* Fluid Ounces to mL
+* Fluid Ounces to Litres
+* Ounces to Grams
+* Ounces to Pounds
+* Pounds to Grams
+* Pounds to Ounces
+* Grams to Ounces
+* Grams to Pounds
+* celsius to Fahrenheit
+* Fahrenheit to Celsius
+
+
 ## Credits
 stratus-ss
