@@ -258,5 +258,6 @@ class RecipeHelperSkill(MycroftSkill):
     def stop(self):
         exit()
 
+
 def create_skill():
     return RecipeHelperSkill()
