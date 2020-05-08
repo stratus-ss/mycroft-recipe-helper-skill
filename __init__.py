@@ -102,12 +102,12 @@ class RecipeHelperSkill(MycroftSkill):
 
     @staticmethod
     def convert_cel_to_fahr(celsius):
-        fahrenheit = (celsius * 1.8) + 32
+        fahrenheit = round(((celsius * 1.8) + 32), 1)
         return fahrenheit
 
     @staticmethod
     def convert_fahr_to_cel(fahrenheit):
-        celsius = (fahrenheit - 32) / 1.8
+        celsius = round(((fahrenheit - 32) / 1.8), 1)
         return celsius
 
     @staticmethod
@@ -247,10 +247,16 @@ class RecipeHelperSkill(MycroftSkill):
                 self.number_of_new_units = self.convert_oz_to_grams(number_of_units_to_convert)
             else:
                 exit()
+        elif "celsius" in self.convert_from_this_unit:
+            self.number_of_new_units = self.convert_cel_to_fahr(number_of_units_to_convert)
+        elif "fahrenheit" in self.convert_from_this_unit:
+            self.number_of_new_units = self.convert_fahr_to_cel(number_of_units_to_convert)
         else:
             pass
         self.speak_conversion_generic()
 
+    def stop(self):
+        exit()
 
 def create_skill():
     return RecipeHelperSkill()
