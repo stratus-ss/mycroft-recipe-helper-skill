@@ -22,48 +22,37 @@ class RecipeHelperSkill(MycroftSkill):
 
     @staticmethod
     def convert_ml_to_litres(number_of_ml):
-        number_of_litres = round((number_of_ml / 1000), 1)
-        return number_of_litres
+        return round((number_of_ml / 1000), 1)
 
     def convert_cups_to_ml(self, number_of_cups):
-        number_of_ml = round((number_of_cups / self.cups_ml_constant_number), 1)
-        return number_of_ml
+        return round((number_of_cups / self.cups_ml_constant_number), 1)
 
     def convert_cups_to_litres(self, number_of_cups):
-        number_of_litres = round((number_of_cups / self.cups_litres_constant_number), 1)
-        return number_of_litres
+        return round((number_of_cups / self.cups_litres_constant_number), 1)
 
     def convert_ml_to_cups(self, number_of_ml):
-        number_of_cups = round((number_of_ml * self.cups_ml_constant_number), 1)
-        return number_of_cups
+        return round((number_of_ml * self.cups_ml_constant_number), 1)
 
     def convert_litres_to_cups(self, number_of_litres):
-        number_of_cups = round((number_of_litres * self.cups_litres_constant_number), 1)
-        return number_of_cups
+        return round((number_of_litres * self.cups_litres_constant_number), 1)
 
     def convert_pints_to_ml(self, number_of_pints):
-        number_of_ml = round((number_of_pints / self.pints_ml_constant_number), 1)
-        return number_of_ml
+        return round((number_of_pints / self.pints_ml_constant_number), 1)
 
     def convert_pints_to_litres(self, number_of_pints):
-        number_of_litres = round((number_of_pints / self.pints_litres_constant_number), 1)
-        return number_of_litres
+        return round((number_of_pints / self.pints_litres_constant_number), 1)
 
     def convert_ml_to_pints(self, number_of_ml):
-        number_of_pints = round((number_of_ml * self.pints_ml_constant_number), 1)
-        return number_of_pints
+        return round((number_of_ml * self.pints_ml_constant_number), 1)
 
     def convert_litres_to_pints(self, number_of_litres):
-        number_of_pints = round((number_of_litres * self.pints_litres_constant_number), 1)
-        return number_of_pints
+        return round((number_of_litres * self.pints_litres_constant_number), 1)
 
     def convert_fl_oz_to_ml(self, number_of_fl_oz):
-        number_of_ml = round((number_of_fl_oz / self.fl_oz_ml_constant_number), 1)
-        return number_of_ml
+        return round((number_of_fl_oz / self.fl_oz_ml_constant_number), 1)
 
     def convert_fl_oz_to_litres(self, number_of_fl_oz):
-        number_of_litres = round((number_of_fl_oz / self.fl_oz_litres_constant_number), 1)
-        return number_of_litres
+        return round((number_of_fl_oz / self.fl_oz_litres_constant_number), 1)
 
     def convert_ml_to_fl_oz(self, number_of_ml):
         number_of_fl_oz = round((number_of_ml * self.fl_oz_ml_constant_number), 1)
@@ -71,83 +60,65 @@ class RecipeHelperSkill(MycroftSkill):
         return number_of_fl_oz
 
     def convert_litres_to_fl_oz(self, number_of_litres):
-        number_of_fl_oz = round((number_of_litres * self.fl_oz_litres_constant_number), 1)
-        return number_of_fl_oz
+        return round((number_of_litres * self.fl_oz_litres_constant_number), 1)
 
     def convert_oz_to_grams(self, number_of_oz):
-        number_of_grams = round((number_of_oz / self.grams_oz_constant_number), 1)
-        return number_of_grams
+        return round((number_of_oz / self.grams_oz_constant_number), 1)
 
     @staticmethod
     def convert_oz_to_lbs(number_of_oz):
-        number_of_lbs = round((number_of_oz / 16), 1)
-        return number_of_lbs
+        return round((number_of_oz / 16), 1)
 
     def convert_lbs_to_grams(self, number_of_lbs):
-        number_of_grams = round((number_of_lbs / self.grams_lbs_constant_number), 1)
-        return number_of_grams
+        return round((number_of_lbs / self.grams_lbs_constant_number), 1)
 
     @staticmethod
     def convert_lbs_to_oz(number_of_lbs):
-        number_of_ounces = round((number_of_lbs * 16), 1)
-        return number_of_ounces
+        return round((number_of_lbs * 16), 1)
 
     def convert_grams_to_oz(self, number_of_grams):
-        number_of_oz = round((number_of_grams * self.grams_oz_constant_number), 1)
-        return number_of_oz
+        return round((number_of_grams * self.grams_oz_constant_number), 1)
 
     def convert_grams_to_lbs(self, number_of_grams):
-        number_of_lbs = round((number_of_grams * self.grams_lbs_constant_number), 1)
-        return number_of_lbs
+        return round((number_of_grams * self.grams_lbs_constant_number), 1)
 
     @staticmethod
     def convert_cel_to_fahr(celsius):
-        fahrenheit = round(((celsius * 1.8) + 32), 1)
-        return fahrenheit
+        return round(((celsius * 1.8) + 32), 1)
 
     @staticmethod
     def convert_fahr_to_cel(fahrenheit):
-        celsius = round(((fahrenheit - 32) / 1.8), 1)
-        return celsius
+        return round(((fahrenheit - 32) / 1.8), 1)
 
     @staticmethod
     def butter_weight_from_tablespoon(unit='grams', number_of_tablespoons=1):
         unit_of_measurement = unit.lower()
         if unit_of_measurement == "grams":
-            number_of_grams = number_of_tablespoons * 14.19
-            return number_of_grams
+            return number_of_tablespoons * 14.19
         if unit_of_measurement == "ounces":
-            number_of_oz = number_of_tablespoons * 0.50
-            return number_of_oz
-        if unit_of_measurement == "lbs" or unit_of_measurement == "pounds":
-            number_of_lbs = number_of_tablespoons * 0.03
-            return number_of_lbs
+            return number_of_tablespoons * 0.50
+        if unit_of_measurement in ["lbs", "pounds"]:
+            return number_of_tablespoons * 0.03
 
     @staticmethod
     def butter_weight_from_teaspoon(unit='grams', number_of_teaspoons=1):
         unit_of_measurement = unit.lower()
         if unit_of_measurement == "grams":
-            number_of_grams = number_of_teaspoons * 4.73
-            return number_of_grams
+            return number_of_teaspoons * 4.73
         if unit_of_measurement == "ounces":
-            number_of_oz = number_of_teaspoons * 0.17
-            return number_of_oz
-        if unit_of_measurement == "lbs" or unit_of_measurement == "pounds":
-            number_of_lbs = number_of_teaspoons * 0.01
-            return number_of_lbs
+            return number_of_teaspoons * 0.17
+        if unit_of_measurement in ["lbs", "pounds"]:
+            return number_of_teaspoons * 0.01
 
     @staticmethod
     def butter_weight_from_cups(unit='grams', number_of_cups=1):
         unit_of_measurement = unit.lower()
         if unit_of_measurement == "grams":
-            number_of_grams = number_of_cups * 227
-            return number_of_grams
+            return number_of_cups * 227
         if unit_of_measurement == "ounces":
-            number_of_oz = number_of_cups * 8.01
-            return number_of_oz
-        if unit_of_measurement == "lbs" or unit_of_measurement == "pounds":
-            number_of_lbs = number_of_cups * 0.50
-            return number_of_lbs
+            return number_of_cups * 8.01
+        if unit_of_measurement in ["lbs", "pounds"]:
+            return number_of_cups * 0.50
 
     def get_converted_units(self):
         return int(self.convert_from_this_unit.split()[0])
@@ -176,8 +147,6 @@ class RecipeHelperSkill(MycroftSkill):
             elif "cups" in message.data['utterance']:
                 self.number_of_new_units = self.butter_weight_from_cups(unit=self.convert_to_this_unit,
                                                                         number_of_cups=self.get_converted_units())
-            else:
-                pass
             self.speak_conversion_weight()
 
     @intent_file_handler("convert.units.intent")
@@ -251,8 +220,6 @@ class RecipeHelperSkill(MycroftSkill):
             self.number_of_new_units = self.convert_cel_to_fahr(number_of_units_to_convert)
         elif "fahrenheit" in self.convert_from_this_unit:
             self.number_of_new_units = self.convert_fahr_to_cel(number_of_units_to_convert)
-        else:
-            pass
         self.speak_conversion_generic()
 
     def stop(self):
